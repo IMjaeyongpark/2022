@@ -4,52 +4,52 @@
 #include<windows.h>
 #include<time.h>
 
-typedef struct numbg {			//·£´ıÀ¸·Î »ı¼ºµÈ ¼ıÀÚ¸¦ ÀúÀåÇÒ ¿¬°á¸®½ºÆ®
-	int i;						//¼ıÀÚ À§Ä¡ 
+typedef struct numbg {			//ëœë¤ìœ¼ë¡œ ìƒì„±ëœ ìˆ«ìë¥¼ ì €ì¥í•  ì—°ê²°ë¦¬ìŠ¤íŠ¸
+	int i;						//ìˆ«ì ìœ„ì¹˜ 
 	int num;					 
 	struct numbg* next;
 }NUMBG;
 
-NUMBG* innum();					//·£´ı¼ıÀÚ »ı¼º ÇÔ¼ö 
-NUMBG* ipruk(int _count);		//ÇÃ·¹ÀÌ¾î°¡ ÀÔ·ÂÇÑ ¼ıÀÚ ÀúÀå ÇÔ¼ö 
-void print();					//ÇÁ·Î±×·¥ ÀÌ¸§ Ãâ·Â ÇÔ¼ö
-int menu();						//¸Ş´º¸¦ Ãâ·ÂÇÏ°í ¼±ÅÃÇÏ´Â ÇÔ¼ö
-int check(int ran, NUMBG* aa);	//·£´ıÀ¸·Î »ı¼ºµÈ ¼ıÀÚ°¡ Áßº¹µÇ´ÂÁö È®ÀÎÇÏ´Â ÇÔ¼ö
-int game(NUMBG* comp);			//¼ıÀÚ¾ß±¸ ½ÃÀÛ	
-int che (char *_a);				//»ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ¼ö°¡ Á¶°Ç¿¡ ¸Â´ÂÁö È®ÀÎÇÏ´Â ÇÔ¼ö 
+NUMBG* innum();					//ëœë¤ìˆ«ì ìƒì„± í•¨ìˆ˜ 
+NUMBG* ipruk(int _count);		//í”Œë ˆì´ì–´ê°€ ì…ë ¥í•œ ìˆ«ì ì €ì¥ í•¨ìˆ˜ 
+void print();					//í”„ë¡œê·¸ë¨ ì´ë¦„ ì¶œë ¥ í•¨ìˆ˜
+int menu();						//ë©”ë‰´ë¥¼ ì¶œë ¥í•˜ê³  ì„ íƒí•˜ëŠ” í•¨ìˆ˜
+int check(int ran, NUMBG* aa);	//ëœë¤ìœ¼ë¡œ ìƒì„±ëœ ìˆ«ìê°€ ì¤‘ë³µë˜ëŠ”ì§€ í™•ì¸í•˜ëŠ” í•¨ìˆ˜
+int game(NUMBG* comp);			//ìˆ«ìì•¼êµ¬ ì‹œì‘	
+int che (char *_a);				//ì‚¬ìš©ìê°€ ì…ë ¥í•œ ìˆ˜ê°€ ì¡°ê±´ì— ë§ëŠ”ì§€ í™•ì¸í•˜ëŠ” í•¨ìˆ˜ 
 
 void main() {
 	NUMBG* ranum = NULL;
 	int sel, count;
 	while (1) {
 		print();
-		sel = menu();	//¸Ş´º ¼±ÅÃ 
+		sel = menu();	//ë©”ë‰´ ì„ íƒ 
 		switch (sel) {
 		case 1:ranum = innum();
 			count = game(ranum);
-			printf("\n\n\n\n%dÈ¸¸¸¿¡ ½Â¸®!!!!\n\n\n\n", count);		//½ÃµµÇÑ È½¼ö Ãâ·Â 
+			printf("\n\n\n\n%díšŒë§Œì— ìŠ¹ë¦¬!!!!\n\n\n\n", count);		//ì‹œë„í•œ íšŸìˆ˜ ì¶œë ¥ 
 			break;
-		case 2:printf("\n\n\n\nÇÁ·Î±×·¥ Á¾·á\n\n\n\n");
+		case 2:printf("\n\n\n\ní”„ë¡œê·¸ë¨ ì¢…ë£Œ\n\n\n\n");
 			exit(-1);
 		}
 		printf("\n\n\n");
 		system("pause");
-		system("cls");		//ÄÜ¼ÖÃ¢ Áö¿ì±â 
+		system("cls");		//ì½˜ì†”ì°½ ì§€ìš°ê¸° 
 	}
 }
 
 void print() {
 	printf("*************************************\n");
-	printf("           ¼ıÀÚ¾ß±¸ °ÔÀÓ             \n");
+	printf("           ìˆ«ìì•¼êµ¬ ê²Œì„             \n");
 	printf("*************************************\n");
 	return;
 }
 
 int menu() {
 	int _sel;
-	printf("1.½ÃÀÛ\n");
-	printf("2.Á¾·á\n");
-	printf("¸Ş´º¸¦ ¼±ÅÃÇÏ¼¼¿ä:");
+	printf("1.ì‹œì‘\n");
+	printf("2.ì¢…ë£Œ\n");
+	printf("ë©”ë‰´ë¥¼ ì„ íƒí•˜ì„¸ìš”:");
 	scanf_s("%d", &_sel);
 	return _sel;
 }
@@ -57,24 +57,24 @@ int menu() {
 NUMBG* innum() {
 	NUMBG* head = NULL, * newrand = NULL, * current = NULL;
 	int ranum, i = 0;
-	srand(time(NULL));		//½Ã°£ÀÌ Áö³²¿¡ µû¶ó ¼ıÀÚ°¡ ¹Ù²ñ
+	srand(time(NULL));		//ì‹œê°„ì´ ì§€ë‚¨ì— ë”°ë¼ ìˆ«ìê°€ ë°”ë€œ
 	for (i = 0; i < 5; i++) {
-		ranum = rand() % 9 + 1;	//·£´ıÀ¸·Î 1 ~ 9±îÁöÀÇ ¼ıÀÚ »ı¼º  
-		ranum = check(ranum, head);	//»ı¼ºµÈ ¼ıÀÚ°¡ Áßº¹ÀÎÁö È®ÀÎ 
+		ranum = rand() % 9 + 1;	//ëœë¤ìœ¼ë¡œ 1 ~ 9ê¹Œì§€ì˜ ìˆ«ì ìƒì„±  
+		ranum = check(ranum, head);	//ìƒì„±ëœ ìˆ«ìê°€ ì¤‘ë³µì¸ì§€ í™•ì¸ 
 		newrand = (NUMBG*)malloc(sizeof(NUMBG));
 		newrand->num = ranum;
 		newrand->i = i + 1;
 		newrand->next = NULL;
-		if (head == NULL) {		//Ã¹¹ø¤Š ³ëµå 
+		if (head == NULL) {		//ì²«ë²ˆÂŠ ë…¸ë“œ 
 			head = newrand;
 			current = newrand;
 		}
-		else {					//±×´ÙÀ½ ³ëµå¿¡ »ğÀÔ 
+		else {					//ê·¸ë‹¤ìŒ ë…¸ë“œì— ì‚½ì… 
 			current->next = newrand;
 			current = current->next;
 		}
 	}
-	return head;		//·£´ıÀ¸·Î »ı¼ºµÈ ¼ıÀÚ°¡ »ğÀÔµÈ ¿¬°á¸®½ºÆ® ¹İÈ¯ 
+	return head;		//ëœë¤ìœ¼ë¡œ ìƒì„±ëœ ìˆ«ìê°€ ì‚½ì…ëœ ì—°ê²°ë¦¬ìŠ¤íŠ¸ ë°˜í™˜ 
 }
 
 int check(int ran, NUMBG* aa) {
@@ -82,13 +82,13 @@ int check(int ran, NUMBG* aa) {
 	bb = aa;
 
 	while (aa != NULL) {
-		if (aa->num == ran) {		//·£´şÀ¸·Î »ı¼ºµÈ ¼ıÀÚ°¡ Áßº¹ÀÎÁö È®ÀÎ 
-			ran = rand() % 9 + 1;	//Áßº¹ÀÌ¸é »õ·Î¿î ·£´ı ¼ıÀÚ »ı¼º 
-			aa = bb;				//Ã³À½ºÎÅÍ ºñ±³ 
+		if (aa->num == ran) {		//ëœë¥ìœ¼ë¡œ ìƒì„±ëœ ìˆ«ìê°€ ì¤‘ë³µì¸ì§€ í™•ì¸ 
+			ran = rand() % 9 + 1;	//ì¤‘ë³µì´ë©´ ìƒˆë¡œìš´ ëœë¤ ìˆ«ì ìƒì„± 
+			aa = bb;				//ì²˜ìŒë¶€í„° ë¹„êµ 
 		}
 		else aa = aa->next;
 	}
-	return ran;						//·£´ı¼ıÀÚ ¹İÈ¯ 
+	return ran;						//ëœë¤ìˆ«ì ë°˜í™˜ 
 }
 
 int game(NUMBG* comp) {
@@ -101,13 +101,13 @@ int game(NUMBG* comp) {
 		int i = 1;
 		S = 0, B = 0;
 		count++;
-		user = ipruk(count);	//¼ıÀÚ¸¦ ÀÔ·Â¹Ş¾Æ ¿¬°á¸®½ºÆ®¿¡ »ğÀÔ 
+		user = ipruk(count);	//ìˆ«ìë¥¼ ì…ë ¥ë°›ì•„ ì—°ê²°ë¦¬ìŠ¤íŠ¸ì— ì‚½ì… 
 		while (user != NULL) {
 			comp = comp2;
 			while (comp != NULL) {
-				if (comp->num == user->num) {		//ÀÔ·Â¹ŞÀº ¼ıÀÚ¿Í ·£´ıÀ¸·Î »ı¼ºµÈ ¼ıÀÚ¸¦ ºñ±³ 
-					if (comp->i == user->i)S++;	//¼ıÀÚ¿¡ ¼ø¼­°¡ °°À¸¸é S++ 
-					else B++;					//¼ıÀÚ¿¡ ¼ø¼­°¡ ´Ù¸£¸é B++ 
+				if (comp->num == user->num) {		//ì…ë ¥ë°›ì€ ìˆ«ìì™€ ëœë¤ìœ¼ë¡œ ìƒì„±ëœ ìˆ«ìë¥¼ ë¹„êµ 
+					if (comp->i == user->i)S++;	//ìˆ«ìì— ìˆœì„œê°€ ê°™ìœ¼ë©´ S++ 
+					else B++;					//ìˆ«ìì— ìˆœì„œê°€ ë‹¤ë¥´ë©´ B++ 
 				}
 				comp = comp->next;
 			}
@@ -115,9 +115,9 @@ int game(NUMBG* comp) {
 			user = user->next;
 			free(del);
 		}
-		printf("S:%d\tB:%d\n", S, B);		//ÀÔ·Â¹ŞÀº ¼ıÀÚ¿Í  ·£´ı¼ıÀÚ¸¦ ºñ±³ÇÏ¿© ¹ŞÀº °á°ú°ª 
+		printf("S:%d\tB:%d\n", S, B);		//ì…ë ¥ë°›ì€ ìˆ«ìì™€  ëœë¤ìˆ«ìë¥¼ ë¹„êµí•˜ì—¬ ë°›ì€ ê²°ê³¼ê°’ 
 	}
-	return count;		//¼º°øÇÏ±â±îÁö ½ÃµµÇÑÈ½¼ö ¹İÈ¯
+	return count;		//ì„±ê³µí•˜ê¸°ê¹Œì§€ ì‹œë„í•œíšŸìˆ˜ ë°˜í™˜
 }
 
 NUMBG* ipruk(int _count) {
@@ -125,13 +125,13 @@ NUMBG* ipruk(int _count) {
 	char a[5];
 	NUMBG* head = NULL, * newnode = NULL, * current = NULL;
 	while (1) {
-		printf("%d.¼ıÀÚÀÔ·Â(5°³,0Á¦¿Ü):", _count);
+		printf("%d.ìˆ«ìì…ë ¥(5ê°œ,0ì œì™¸):", _count);
 		scanf("%s",a);
-		if (che(a) == 1)printf("´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä!!\n");
+		if (che(a) == 1)printf("ë‹¤ì‹œ ì…ë ¥í•˜ì„¸ìš”!!\n");
 		else break;
 	}
 
-	for (_i = 0; _i < 5; _i++) {		//ÀÔ·Â¹ŞÀº ¼ıÀÚ ¿¬°á¸®½ºÆ®¿¡ »ğÀÔ 
+	for (_i = 0; _i < 5; _i++) {		//ì…ë ¥ë°›ì€ ìˆ«ì ì—°ê²°ë¦¬ìŠ¤íŠ¸ì— ì‚½ì… 
 		newnode = (NUMBG*)malloc(sizeof(NUMBG));
 		newnode->i = _i + 1;
 		newnode->num = a[_i]-'0';
@@ -150,45 +150,11 @@ NUMBG* ipruk(int _count) {
 
 int che(char *_a){
 	int _i;
-	if((atoi(_a) - 100000) > 0 || (atoi(_a) - 9999) < 0)return 1;//5ÀÚ¸®ÀÎÁö È®ÀÎ 
+	if((atoi(_a) - 100000) > 0 || (atoi(_a) - 9999) < 0)return 1;//5ìë¦¬ì¸ì§€ í™•ì¸ 
 	else {
 		for(_i=0;_i<5;_i++){
-			if(_a[_i]=='0')return 1;		//0ÀÌ Æ÷ÇÕµÇ¾î ÀÖ´ÂÁö È®ÀÎ 
+			if(_a[_i]=='0')return 1;		//0ì´ í¬í•©ë˜ì–´ ìˆëŠ”ì§€ í™•ì¸ 
 		}
 		return 0;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
