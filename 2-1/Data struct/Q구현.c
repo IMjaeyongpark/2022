@@ -64,32 +64,3 @@ int isempty(){
 	if(rear==front)return true;
 	else return false;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
