@@ -20,3 +20,6 @@ print(b)
 #한꺼번에 입력 받은 데이터의 탑입 변환
 a,b = map(int,input('덧셈에 사용될 두 개의 정수를 입력 : ').split('/'))
 print(a+b)
+
+#출력
+print("aaa","bbb,sep="",end="")
