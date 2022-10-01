@@ -73,9 +73,58 @@ camille = {
 print(camille['health'])
 print(camille['movement_speed'])
       
-#윤년 확인
+#윤년 확인(조건문)
 year = int(input())
 sol = "윤년X"
 if year%4==0 and year%100!= 0 or year%400==0:
     sol ="윤년"
 print(sol)
+      
+#1부터 100까지 짝수의 합(for)
+sum =0;
+for i in range(0,101,2):
+    sum+=i
+print(sum)
+
+#용돈이 첫달에 1원, 두번째달에 2원,4,8,16..
+#용돈이 100만원을 넘는 달은 몇번째 달인가요.(while)
+cnt = 1;
+money =1;
+while money<=1000000:
+    money*=2
+    cnt+=1
+print(cnt,"개월, ",money,"원",sep ="")
+      
+#1부터 사용자가 입력한 정수까지 더하되, 그 합이 입력한 정수룰 넘지 않는 최대값
+num = int(input())
+i = 1
+sum = 0
+idx = 0
+while True:
+    sum += i
+    if sum > num:
+        sum -= i
+        idx = i-1
+        break
+    i += 1
+print(idx,sum)
+      
+#함수
+def sum(a,b):
+    return int(a)+int(b)
+
+x,y =input("피연산자 입력 : ").split()
+print(sum(x,y))
+      
+#로또번호 생성
+import random
+
+for i in range(5):
+    lotto = []
+    while len(lotto) < 6:
+        tmp = random.randint(1,45)
+        if not tmp in lotto:
+            lotto.append(tmp)
+
+    lotto.sort()
+    print(lotto)
