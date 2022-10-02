@@ -57,3 +57,38 @@ def count8(num):
     return cnt
 
 print(count8(10000))
+
+#클래스 연습
+class test:
+    __a = 0
+    def te(self):
+        self.count = 100
+
+class Counter(test):
+    def __init__(self, n = 0):
+        self.count = n
+    def reset(self):
+        self.count = 0
+    def increment(self):
+        self.count += 1
+    def get(self):
+        return self.count
+    def set(self, n):
+        count = n
+    def tt(self):
+        __a = 10
+        return __a
+    
+a = Counter(30)
+b = Counter()
+
+for i in range(50):
+    b.increment()
+    
+print(a.get())
+print(b.get())
+
+a.te()
+
+print(a.get())
+print(a.tt())
