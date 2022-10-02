@@ -19,7 +19,7 @@ personal_info(**x)
 #01 별찍기
 
 for i in range(5):
-    print(' '*(4-i),'*'*(2*(i+1)-1))
+    print(' '*(4-i),'*'*(2*(i+1)-1),sep="")
     
 #02 최대 최소
 def get_max_min(data_list):
@@ -33,7 +33,7 @@ print('최소: {0}, 최대: {1}'.format(_min,_max))
 def  sum_sq(num):
     sum = 0
     for i in range(1,num+1):
-        sum+=i*i
+        sum+=i**2
     return sum
 
 print(sum_sq(int(input())))
@@ -41,9 +41,10 @@ print(sum_sq(int(input())))
 #04 약수 구하기
 def sol(num):
     lst = []
-    for i in range(1,num+1):
+    for i in range(1,(num+1)//2+1):
         if num%i==0:
             lst.append(i) 
+    lst.append(num)
     return lst
 
 print(sol(int(input())))
@@ -51,11 +52,8 @@ print(sol(int(input())))
 #05 1부터 10,000까지 8의 갯수
 def count8(num):
     cnt = 0
-    for i in range(num+1):
-        tmp = str(i)
-        for n in tmp:
-            if n == '8':
-                cnt+=1
+    for i in range(8,num+1):
+            cnt+= str(i).count('8')
     return cnt
 
 print(count8(10000))
