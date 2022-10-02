@@ -92,3 +92,101 @@ a.te()
 
 print(a.get())
 print(a.tt())
+
+#pandas,numpy
+import numpy as np
+import pandas as pd
+
+dic = {'city': ['서울', '부산', '대전', '대구', '광주'],
+        'year': [2017, 2017, 2018, 2018, 2018],
+        'temp': [18, 20, 19, 21, 20]}
+data = pd.DataFrame(dic)
+data.index = ['1','2','3','4','5'] 
+data.columns = ['도시','연도','날씨']
+cars = [50,40,20,30,10]
+data['car'] = cars  #추가
+data['high'] = data.car >= 30
+data.drop('high',1)  #삭제
+print(data,end ="\n\n\n")
+
+f = lambda x: x.max() - x.min()
+df = pd.DataFrame(np.arange(12).reshape(4, 3), 
+                  columns=['A', 'B', 'C'], index=['a', 'b', 'c', 'd'])
+
+print(df,end ="\n\n\n")
+df[df<5]=0
+print(df.apply(f, 1),end ="\n\n\n") 
+
+#데이터 처리
+import numpy as np
+import matplotlib.pyplot as plt
+
+!dir #현재 디랙토리
+!curl http://opentechschool.github.io/python-data-intro/files/radishsurvey.txt\
+    -o ./data/radishsurvey.txt
+dict = {'name':[],
+        'vote':[]
+       }
+vote = {}
+with open("./data/radishsurvey.txt") as file:
+    for line in file:  
+        parts = line.strip().replace("  "," ").split(" - ")
+        name = parts[0].capitalize()
+        v = parts[1].capitalize()
+        
+        if name not in dict['name']:
+            dict['name'].append(name)
+            dict['vote'].append(v)
+        
+        if v not in vote:
+            vote[v] = 1
+        else:
+            vote[v] += 1
+
+data1 = pd.DataFrame(dict)
+data2 = pd.DataFrame(list(vote.items()),columns=['Radish', 'Voted'])
+print(data2)
+print('\n\n',data1,sep="")
+
+#그래프 그리기
+%matplotlib inline
+vals = [3,2,5,0,1]    
+plt.plot(vals)    #x축은 자동으로 지정
+
+plt.show()
+
+#막대 그래프
+names = []
+votes = []
+
+for radish in vote:
+    names.append(radish)
+    votes.append(vote[radish])
+
+# The X axis can just be numbered 0,1,2,3...
+x = np.arange(len(vote))
+
+plt.bar(x, votes)
+plt.xticks(x + 0.5, names, rotation=90)
+plt.show()
+
+#파일
+from pandas import DataFrame, Series 
+import pandas as pd 
+
+with open("test.csv", "w") as f:
+    f.write("a,b,c,d,message \n")
+    f.write("1,2,3,4,hello \n")
+    f.write("5,6,7,8,world \n")
+    f.write("9,10,11,12,foo \n")
+!type test.csv 
+pd.read_csv('test.csv')
+
+#폴더 관리
+import os
+!dir
+#os.getcwd()
+#os.mkdir('test1')#디렉토리 만들기
+#os.rename('test1','chage_name')#디렉토리 이름바꾸기
+#os.remove('./chage_name/outpu.csv')#삭제
+#os.rmdir('change_name')
