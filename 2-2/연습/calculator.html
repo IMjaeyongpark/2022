@@ -1,42 +1,50 @@
 <html>
 <title>계산기</title>
+
 <head>
-    <style> 
-        input{margin: 5px;}
-        input{
-            width: 40px; 
+    <style>
+        input {
+            margin: 5px;
+            width: 40px;
             height: 30px;
         }
-        #num{
+
+        #num {
             color: blue;
         }
-        #other{
+
+        #other {
             color: black;
         }
-        #output,#cur{
-            width: 240px; 
+
+        #output,
+        #cur {
+            width: 240px;
             height: 30px;
-            text-align:right;
+            text-align: right;
         }
-        #clear,#result{
-            width: 115px; 
+
+        #clear,
+        #result {
+            width: 115px;
             height: 30px;
         }
-     </style>
+    </style>
 </head>
+
 <body>
     <table>
-        <input type="text" id="cur" value = 0 ><br>
-        <input type="text" id="output" value="0" ><br>
-        <input type="button" id="clear" value="Clear" onclick="Clear()" >
-        <input type="button" id="result" value="="  onclick="b_click(this)"><br>
+        <input type="text" id="cur" value=0><br>
+        <input type="text" id="output" value="0"><br>
+        <input type="button" id="clear" value="Clear" onclick="Clear()">
+        <input type="button" id="result" value="=" onclick="b_click(this)"><br>
 
         <input type="button" id="num" value="1" onclick="numclick(this)">
         <input type="button" id="num" value="2" onclick="numclick(this)">
         <input type="button" id="num" value="3" onclick="numclick(this)">
         <input type="button" id="other" value="+" onclick="b_click(this)">
         <input type="button" id="other" value="←" onclick="back()"><br>
-        
+
         <input type="button" id="num" value="4" onclick="numclick(this)">
         <input type="button" id="num" value="5" onclick="numclick(this)">
         <input type="button" id="num" value="6" onclick="numclick(this)">
@@ -59,63 +67,63 @@
 
 </html>
 
-<script>
+<script lnaguage="javascript">
     let pre_b = ""
     let curnum = ""
     let dot = false
     let output = document.getElementById("output")
     let cur = document.getElementById("cur")
 
-    function back(){
+    function back() {
         curnum = curnum.substring(0, curnum.length - 1)
-        if(curnum[curnum.length-1]=="."){
+        if (curnum[curnum.length - 1] == ".") {
             curnum = curnum.substring(0, curnum.length - 1)
             dot = false
         }
         output.value = curnum
-        if(curnum.length==0||(curnum=="-")){
+        if (curnum.length == 0 || (curnum == "-")) {
             output.value = "0"
         }
     }
-    function Ce(){
+    function Ce() {
         curnum = ""
         output.value = "0"
         dot = false
     }
-    function indot(){
-        if(dot)return
-        if(curnum == "")curnum += "0"
+    function indot() {
+        if (dot) return
+        if (curnum == "") curnum += "0"
         curnum += "."
         output.value = curnum
     }
 
-    function numclick(self){
-        if((curnum == "" && self.value =="0"))return
-            curnum += self.value
-            output.value = curnum
+    function numclick(self) {
+        if ((curnum == "" && self.value == "0")) return
+        curnum += self.value
+        output.value = curnum
     }
 
-    function b_click(self){
-        if(curnum=="")curnum = "0"
+    function b_click(self) {
+        if (curnum == "") curnum = "0"
         let n = parseFloat(curnum)
         let result = 0
-        if(pre_b == "+"){
+        if (pre_b == "+") {
             result = parseFloat(cur.value) + n
         }
-        else if(pre_b == "-"){
-            result =parseFloat(cur.value)- n
+        else if (pre_b == "-") {
+            result = parseFloat(cur.value) - n
         }
-        else if(pre_b == "*"){
+        else if (pre_b == "*") {
             result = parseFloat(cur.value) * n
         }
-        else if(pre_b == "/"){
+        else if (pre_b == "/") {
             result = parseFloat(cur.value) / n
         }
-        else{
-            result = parseFloat(cur.value)+n
+        else {
+            result = parseFloat(cur.value) + n
         }
-        if(self.value == "="){
-            cur.value =cur.value +curnum+ "="+String(result)
+        if (self.value == "=") {
+            cur.value = cur.value + curnum + "=" + String(result)
         }
         else cur.value = String(result) + self.value
         pre_b = self.value
@@ -124,41 +132,23 @@
         dot = false
     }
 
-    function special(self){
-        if(parseFloat(output.value) == 0)return
-        if(self.value=="x^2")
-            curnum = parseFloat(curnum)**2
-        else if(self.value=="1/x")
-            curnum = 1/parseFloat(curnum)
-        else if(self.value=="+/-")
-            curnum = String((parseFloat(curnum)*(-1)))
-        output.value = String(curnum)
-    }
-    function square(){
-        if(parseFloat(output.value) == 0)return
-        curnum = parseFloat(curnum)**2
-        output.value = String(curnum)
-
-    }
-
-    function reciprocal(){
-        if(parseFloat(output.value) == 0)return
-        curnum = 1/parseFloat(curnum)
+    function special(self) {
+        if (parseFloat(output.value) == 0) return
+        if (self.value == "x^2")
+            curnum = parseFloat(curnum) ** 2
+        else if (self.value == "1/x")
+            curnum = 1 / parseFloat(curnum)
+        else if (self.value == "+/-")
+            curnum = String((parseFloat(curnum) * (-1)))
         output.value = String(curnum)
     }
 
-    function negetive(){
-        if(parseFloat(output.value) == 0)return
-        curnum = String((parseFloat(curnum)*(-1)))
-        output.value = string(curnum)
-    }
-
-    function Clear(){
+    function Clear() {
         curnum = ""
         pre_b = ""
         cur.value = 0
         output.value = "0"
         dot = false
     }
-    
+
 </script>
