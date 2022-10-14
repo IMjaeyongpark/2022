@@ -47,13 +47,13 @@
         <input type="button" id="num" value="8" onclick="numclick(this)">
         <input type="button" id="num" value="9" onclick="numclick(this)">
         <input type="button" id="other" value="*" onclick="b_click(this)">
-        <input type="button" id="other" value="x^2" onclick="square()"><br>
+        <input type="button" id="other" value="x^2" onclick="special(this)"><br>
 
-        <input type="button" id="other" value="+/-" onclick="negetive()">
+        <input type="button" id="other" value="+/-" onclick="special(this)">
         <input type="button" id="num" value="0" onclick="numclick(this)">
         <input type="button" id="other" value="." onclick="indot()">
         <input type="button" id="other" value="/" onclick="b_click(this)">
-        <input type="button" id="other" value="1/x" onclick="reciprocal()">
+        <input type="button" id="other" value="1/x" onclick="special(this)">
     </table>
 </body>
 
@@ -86,12 +86,6 @@
         if(dot)return
         if(curnum == "")curnum += "0"
         curnum += "."
-        output.value = curnum
-    }
-
-    function negetive(){
-        if(parseFloat(output.value) == 0)return
-        curnum = String((parseFloat(curnum)*(-1)))
         output.value = curnum
     }
 
@@ -130,6 +124,16 @@
         dot = false
     }
 
+    function special(self){
+        if(parseFloat(output.value) == 0)return
+        if(self.value=="x^2")
+            curnum = parseFloat(curnum)**2
+        else if(self.value=="1/x")
+            curnum = 1/parseFloat(curnum)
+        else if(self.value=="+/-")
+            curnum = String((parseFloat(curnum)*(-1)))
+        output.value = String(curnum)
+    }
     function square(){
         if(parseFloat(output.value) == 0)return
         curnum = parseFloat(curnum)**2
@@ -143,6 +147,12 @@
         output.value = String(curnum)
     }
 
+    function negetive(){
+        if(parseFloat(output.value) == 0)return
+        curnum = String((parseFloat(curnum)*(-1)))
+        output.value = string(curnum)
+    }
+
     function Clear(){
         curnum = ""
         pre_b = ""
@@ -150,4 +160,5 @@
         output.value = "0"
         dot = false
     }
+    
 </script>
