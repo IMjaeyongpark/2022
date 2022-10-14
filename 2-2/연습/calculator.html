@@ -3,10 +3,11 @@
 
 <head>
     <style>
+
         input {
-            margin: 5px;
             width: 40px;
             height: 30px;
+            margin: 5px;
         }
 
         #num {
@@ -95,6 +96,7 @@
         if (curnum == "") curnum += "0"
         curnum += "."
         output.value = curnum
+        dot=true
     }
 
     function numclick(self) {
@@ -136,8 +138,10 @@
         if (parseFloat(output.value) == 0) return
         if (self.value == "x^2")
             curnum = parseFloat(curnum) ** 2
-        else if (self.value == "1/x")
+        else if (self.value == "1/x"){
+            dot = true
             curnum = 1 / parseFloat(curnum)
+        }
         else if (self.value == "+/-")
             curnum = String((parseFloat(curnum) * (-1)))
         output.value = String(curnum)
