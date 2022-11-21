@@ -1,5 +1,5 @@
 station_name:소요산역		line:1호선		station_num:1		next_station:(1호선,2,4)
-station_name:동두천역		line:1호선		station_num:2		next_station::(1호선,1,4)(1호선,3,2)
+station_name:동두천역		line:1호선		station_num:2		next_station:(1호선,1,4)(1호선,3,2)
 station_name:보산역			line:1호선		station_num:3		next_station:(1호선,2,2)(1호선,4,2)
 station_name:동두천중앙역		line:1호선		station_num:4		next_station:(1호선,3,2)(1호선,5,2)
 station_name:지행역			line:1호선		station_num:5		next_station:(1호선,4,2)(1호선,6,5)
