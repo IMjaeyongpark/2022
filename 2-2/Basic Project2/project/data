@@ -709,7 +709,7 @@ station_name:서부여성회관역		line:인천2호선		station_num:14		next_sta
 station_name:인천가좌역		line:인천2호선		station_num:15		next_station:(인천2호선,14,1)(인천2호선,16,1)
 station_name:가재울역		line:인천2호선		station_num:16		next_station:(인천2호선,15,1)(인천2호선,17,1)
 station_name:주안국가산단역		line:인천2호선		station_num:17		next_station:(인천2호선,16,1)(인천2호선,18,1)
-station_name:주안역		line:인천2호선		station_num:18		next_station:(1호선,56,1)(1호선,58,1)(인천2호선,주안국가산단역,2)(인천2호,시민공원역,2)
+station_name:주안역		line:인천2호선		station_num:18		next_station:(1호선,56,1)(1호선,58,1)(인천2호선,주안국가산단역,2)(인천2호선,시민공원역,2)
 station_name:시민공원역		line:인천2호선		station_num:19		next_station:(인천2호선,18,2)(인천2호선,20,1)
 station_name:석바위시장역		line:인천2호선		station_num:20		next_station:(인천2호선,19,1)(인천2호선,21,1)
 station_name:인천시청역		line:인천2호선		station_num:21		next_station:(인천1호선,15,2)(인천1호선,16,2)(인천2호선,20,1)(인천2호선,22,1)
