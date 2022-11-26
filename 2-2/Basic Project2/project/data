@@ -671,7 +671,7 @@ station_name:작전역		line:인천1호선		station_num:7		next_station:(인천1
 station_name:갈산역		line:인천1호선		station_num:8		next_station:(인천1호선,7,1)(인천1호선,9,1)
 station_name:부평구청역		line:인천1호선		station_num:9		next_station:(7호선,2,2)(7호선,4,1)(인천1호선,갈산역,2)(인천1호선,부평시장역,2)
 station_name:부평시장역		line:인천1호선		station_num:10		next_station:(인천1호선,9,2)(인천1호선,11,1)
-station_name:부평역		line:인천1호선		station_num:11		next_station:(1호선,52,2)(1호선,54,2)(인천1,부평시장역,1)(인천1,동수역,1)
+station_name:부평역		line:인천1호선		station_num:11		next_station:(1호선,52,2)(1호선,54,2)(인천1호선,부평시장역,1)(인천1호선,동수역,1)
 station_name:동수역		line:인천1호선		station_num:12		next_station:(인천1호선,11,1)(인천1호선,13,2)
 station_name:부평삼거리역		line:인천1호선		station_num:13		next_station:(인천1호선,12,2)(인천1호선,14,2)
 station_name:간석오거리역		line:인천1호선		station_num:14		next_station:(인천1호선,13,1)(인천1호선,15,3)
