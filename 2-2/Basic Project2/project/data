@@ -419,7 +419,7 @@ station_name:수진역		line:8호선		station_num:17		next_station:(8호선,16,2
 station_name:모란역		line:8호선		station_num:18		next_station:(8호선,17,2)(수인분당선,태평역,1)(수인분당선,야탑역,2)
 						
 station_name:개화역		line:9호선		station_num:1		next_station:(9호선,2,4)
-station_name:김포공항역		line:9호선		station_num:2		next_station:(5호선,2,2)(5호선,4,2)(9호선,개화역,5)(9호선,공항시장역,1)(공항철도,마곡나루역,3)(공항철도,계양역,6)(김포골드,고촌역,5)
+station_name:김포공항역		line:9호선		station_num:2		next_station:(5호선,2,2)(5호선,4,2)(9호선,개화역,5)(9호선,공항시장역,1)(공항철도,마곡나루역,3)(공항철도,계양역,6)(김포골드라인,고촌역,5)
 station_name:공항시장역		line:9호선		station_num:3		next_station:(9호선,2,1)(9호선,4,1)
 station_name:신방화역		line:9호선		station_num:4		next_station:(9호선,3,1)(9호선,5,2)
 station_name:마곡나루역		line:9호선		station_num:5		next_station:(9호선,4,2)(9호선,6,2)(9호선,2,4)(공항철도,디지털미디어시티역,1)
