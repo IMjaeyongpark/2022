@@ -465,7 +465,7 @@ station_name:영종역		line:공항철도		station_num:5		next_station:(공항�
 station_name:청라국제도시역		line:공항철도		station_num:6		next_station:(공항철도,5,8)(공항철도,7,4)
 station_name:검암역		line:공항철도		station_num:7		next_station:(공항철도,6,4)(공항철도,8,5)(인천2호선,검바위역,1)(인천2호선,독정역,2)
 station_name:계양역		line:공항철도		station_num:8		next_station:(공항철도,7,6)(공항철도,9,6)(인천1호선,귤현역,1)
-station_name:김포공항역		line:공항철도		station_num:9		next_station:(5호선,2,2)(5호선,4,2)(9호선,개화역,5)(9호선,공항시장역,1)(공항철도,마곡나루역,3)(공항철도,계양역,6)(김포골드,고촌역,5)
+station_name:김포공항역		line:공항철도		station_num:9		next_station:(5호선,2,2)(5호선,4,2)(9호선,개화역,5)(9호선,공항시장역,1)(공항철도,마곡나루역,3)(공항철도,계양역,6)(김포골드라인,고촌역,5)
 station_name:마곡나루역		line:공항철도		station_num:10		next_station:(9호선,4,2)(9호선,6,2)(9호선,2,4)(공항철도,디지털미디어시티역,1)
 station_name:디지털미디어시티역		line:공항철도		station_num:11		next_station:(6호선,8,1)(6호선,10,1)(경의중앙선,수색역,2)(경의중앙선,가좌역,2)(공항철도,마곡나루역,7)(공항철도,홍대입구역,3)
 station_name:홍대입구역		line:공항철도		station_num:12		next_station:(2호선,36,2)(2호선,38,2)(공항철도,디지털미디어시티역,4)(공항철도,공덕역,3)(경의중앙선,가좌역,2)(경의중앙선,서강대역,1)
