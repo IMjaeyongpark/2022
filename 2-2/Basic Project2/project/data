@@ -223,7 +223,7 @@ station_name:고속터미널역	line:7호선	station_num:28	next_station:(3호�
 station_name:반포역	line:7호선	station_num:29	next_station:(7호선,28,2)(7호선,30,1)
 station_name:논현역	line:7호선	station_num:30	next_station:(7호선,29,1)(7호선,31,1)(신분당선,1,1)(신분당선,3,2)
 station_name:학동역	line:7호선	station_num:31	next_station:(7호선,30,1)(7호선,32,1)
-station_name:강남구청역	line:7호선	station_num:32	next_station:(7호선,31,1)(7호선,33,1)(수인분당선,33,2)(수인분당선,33,1)
+station_name:강남구청역	line:7호선	station_num:32	next_station:(7호선,31,1)(7호선,33,1)(수인분당선,60,2)(수인분당선,58,2)
 station_name:청담역	line:7호선	station_num:33	next_station:(7호선,32,1)(7호선,34,2)
 station_name:뚝섬유원지역	line:7호선	station_num:34	next_station:(7호선,33,2)(7호선,35,1)
 station_name:건대입구역	line:7호선	station_num:35	next_station:(2호선,5,1)(2호선,7,2)(7호선,36,1)(7호선,34,2)
