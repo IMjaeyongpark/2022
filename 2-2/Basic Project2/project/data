@@ -557,7 +557,7 @@ station_name:도곡역	line:수인분당선	station_num:55	next_station:(3호선
 station_name:한티역	line:수인분당선	station_num:56	next_station:(수인분당선,55,1)(수인분당선,57,2)
 station_name:선릉역	line:수인분당선	station_num:57	next_station:(2호선,13,2)(2호선,15,2)(수인분당선,58,2)(수인분당선,56,2)
 station_name:선정릉역	line:수인분당선	station_num:58	next_station:(9호선,26,1)(9호선,28,2)(수인분당선,59,1)(수인분당선,57,2)
-station_name:강남구청역	line:수인분당선	station_num:59	next_station:(7호선,31,1)(7호선,33,1)(수인분당선,33,2)(수인분당선,33,1)
+station_name:강남구청역	line:수인분당선	station_num:59	next_station:(7호선,31,1)(7호선,33,1)(수인분당선,60,2)(수인분당선,58,1)
 station_name:압구정로데오역	line:수인분당선	station_num:60	next_station:(수인분당선,59,2)(수인분당선,61,2)
 station_name:서울숲역	line:수인분당선	station_num:61	next_station:(수인분당선,60,2)(수인분당선,62,3)
 station_name:왕십리역	line:수인분당선	station_num:62	next_station:(2호선,48,1)(2호선,50,1)(5호선,32,1)(5호선,3,1)(경의중앙선,35,4)(경의중앙선,33,2)(수인분당선,61,3)(수인분당선,63,5)
